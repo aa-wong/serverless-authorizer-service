@@ -1,8 +1,5 @@
 # serverless-authorizer-service
 
-Version : 1
-
-
 ## Setup
 
 ### Local dev environment
