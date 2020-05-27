@@ -1,0 +1,27 @@
+{
+  "name": "authorizer-function",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "NODE_ENV=production node dist/serverless.js",
+    "dev:local": "NODE_ENV=development nodemon local.js --exec babel-node",
+    "dev:sls": "sls offline",
+    "build": "babel src -d dist",
+    "test": "NODE_ENV=test mocha --compilers js:babel-register --timeout 10000",
+    "deploy": "npm run build && serverless deploy --aws-profile serverless-agent"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "config": "^1.31.0",
+    "jsonwebtoken": "^8.5.1",
+    "serverless-http": "^2.5.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
+    "nodemon": "^1.19.4",
+    "serverless-offline": "^5.12.1"
+  }
+}

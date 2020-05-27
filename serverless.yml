@@ -1,0 +1,27 @@
+service: authorizer-function
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  stage: dev
+  region: us-east-1
+
+functions:
+  authorize:
+    handler: src.handler
+    environment:
+      NODE_ENV: production
+    events:
+      - http: ANY /
+      - http: 'ANY {proxy+}'
+
+package:
+  exclude:
+    - config/development.json
+    - .babelrc
+    - .gitignore
+    - README.md
+    - local.js
+
+plugins:
+  - serverless-offline

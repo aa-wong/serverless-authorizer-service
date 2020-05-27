@@ -1,0 +1,8 @@
+{
+	"environment": "DEVELOPMENT",
+	"url": "http://localhost:8001",
+	"database": "mongodb+srv://auth-core-server:bLlErIM5iwNrWqzy@kabode-core-db-ivv8b.mongodb.net/kabode-core-db?retryWrites=true&w=majority",
+	"api_server": "http://localhost:8000",
+	"version": 1,
+	"secret": "CGu27;x)YcPpqKU>%TY.8FAF7XeAY?"
+}
