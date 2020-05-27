@@ -1,7 +1,4 @@
 {
 	"environment": "DEVELOPMENT",
-	"url": "http://localhost:8001",
-	"api_server": "http://localhost:8000",
-	"version": 1,
 	"secret": "<set secret key>"
 }
